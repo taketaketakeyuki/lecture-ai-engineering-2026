@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.8095238095238095,
+    "both_rate": 0.8095238095238095,
+    "seconds": 38.8
+  },
+  "rows": [
+    {
+      "question": "ESの提出期限は？",
+      "raw": "{\"answer\": \"エントリーシートの提出締切は 3 月 15 日 18:00 です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "エントリーシートは何月何日の何時までに出せばよいですか",
+      "raw": "{\"answer\": \"エントリーシートの提出締切は 3 月 15 日 18:00 です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "応募締切の日付と時刻を教えてください",
+      "raw": "{\"answer\": \"エントリーシートの提出締切は 3 月 15 日 18:00 です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "応募の手続きは？",
+      "raw": "{\"answer\": \"応募は採用サイトのマイページから受け付けます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "応募書類はどこから提出しますか",
+      "raw": "{\"answer\": \"応募は採用サイトのマイページから受け付けます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "エントリーの受付窓口を教えてください",
+      "raw": "{\"answer\": \"応募は採用サイトのマイページから受け付けます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "選考プロセスは？",
+      "raw": "{\"answer\": \"選考は書類選考、適性検査、面接 2 回の順に進みます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "内定までにどんな選考がありますか",
+      "raw": "{\"answer\": \"選考は書類選考、適性検査、面接 2 回の順に進みます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "適性検査はどの段階で受けますか",
+      "raw": "{\"answer\": \"選考は書類選考、適性検査、面接 2 回の順に進みます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "面接は対面ですか",
+      "raw": "{\"answer\": \"最終面接は本社での対面で実施します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "一次面接と最終面接の形式の違いを教えてください",
+      "raw": "{\"answer\": \"一次面接はオンライン、最終面接は本社での対面で実施します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "本社に行く必要はありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "選考結果の連絡は？",
+      "raw": "{\"answer\": \"選考結果は各選考から 1 週間以内にメールで連絡します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "面接のあと何日くらいで結果が来ますか",
+      "raw": "{\"answer\": \"選考結果は各選考から 1 週間以内にメールで連絡します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "合否はメールで届きますか",
+      "raw": "{\"answer\": \"選考結果は各選考から 1 週間以内にメールで連絡します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "インターンに参加していないと不利ですか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "採用予定人数は何人ですか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "面接は 1 回あたり何分くらいですか",
+      "raw": "{\"answer\": \"一次面接はオンライン、最終面接は本社での対面で実施します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "オンライン面接ではどのツールを使いますか",
+      "raw": "{\"answer\": \"一次面接はオンライン、最終面接は本社での対面で実施します。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "最終面接の交通費は支給されますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "不合格の理由は教えてもらえますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    }
+  ]
+}
