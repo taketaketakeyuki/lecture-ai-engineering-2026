@@ -17,6 +17,7 @@ import sqlite_vec
 from app.config import (
     EMBEDDING_DIMENSIONS, EMBEDDING_MAX_TOKENS, EMBEDDING_MODEL,
     RAG_DB, RAG_DOCUMENT_IDS, RAG_SOURCE, RAG_TOP_K, RAG_TREE, get_api_key,
+    RAG_NEIGHBORS,
     RAG_GRAPH, GRAPH_START_K, GRAPH_HOPS, GRAPH_MAX_RESULTS,
 )
 
@@ -124,6 +125,24 @@ def open_index(path: Path):
         db.close()
 
 
+def add_neighbor_pages(hits: list[dict], window: int | None = None) -> list[dict]:
+    """検索結果の各ページに、同じ資料の前後windowページの本文を付ける（資料をまたがず、重複なし）。"""
+    window = RAG_NEIGHBORS if window is None else window
+    if window <= 0:
+        return hits
+    by_position = {(p["document_id"], p["page"]): p for p in load_pages(RAG_SOURCE)}
+    used = {hit["page_id"] for hit in hits}  # 検索でヒットしたページは前後ページとして再度付けない
+    for hit in hits:
+        hit["neighbors"] = []
+        for offset in [o for o in range(-window, window + 1) if o != 0]:
+            neighbor = by_position.get((hit["document_id"], int(hit["page"]) + offset))
+            if neighbor is None or neighbor["page_id"] in used:
+                continue
+            used.add(neighbor["page_id"])
+            hit["neighbors"].append({**neighbor, "position": "前" if offset < 0 else "次"})
+    return hits
+
+
 def search(query: str) -> list[dict]:
     """質問を埋め込み、近いページを最大RAG_TOP_K件返す。"""
     if not isinstance(query, str) or not query.strip():
@@ -135,7 +154,7 @@ def search(query: str) -> list[dict]:
                    vec_distance_cosine(embedding, ?) AS distance
             FROM chunks ORDER BY distance, page_id LIMIT ?
         """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
-        return [dict(row) for row in rows]
+        return add_neighbor_pages([dict(row) for row in rows])
 
 
 def search_graph(query: str) -> dict:
@@ -209,3 +228,5 @@ if __name__ == "__main__":
         print(f"タイトル: {result['title']}")
         print(f"ページ: {result['page']}")
         print(f"\n{result['content']}")
+        for neighbor in result.get("neighbors", []):
+            print(f"\n--- {neighbor['position']}のページ: p.{neighbor['page']} {neighbor['title']}\n{neighbor['content']}")
